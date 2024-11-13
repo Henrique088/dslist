@@ -27,6 +27,7 @@ public class Game {
 	private Double score;
 	private String imgUrl;
 	
+	// jpa gera como campo texto expandindo o maximo de 255 caracteres lá do banco de dados
 	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
 
@@ -37,7 +38,7 @@ public class Game {
 		
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String platafforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		
 		
@@ -45,7 +46,7 @@ public class Game {
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platafforms = platafforms;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -84,12 +85,12 @@ public class Game {
 		this.genre = genre;
 	}
 
-	public String getPlatafforms() {
-		return platafforms;
+	public String getplatforms() {
+		return platforms;
 	}
 
-	public void setPlatafforms(String platafforms) {
-		this.platafforms = platafforms;
+	public void setplatforms(String platafforms) {
+		this.platforms = platafforms;
 	}
 
 	public Double getScore() {
