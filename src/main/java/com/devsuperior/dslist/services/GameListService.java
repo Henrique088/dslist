@@ -30,4 +30,5 @@ public class GameListService {
 		// toList volta para uma lista normal
 		return result.stream().map(GameListDTO::new).toList();
 	}
+		
 }
